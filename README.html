@@ -18,8 +18,17 @@ section h1{background:linear-gradient(100deg,var(--accent),var(--accent2));color
 .back-home{display:inline-block;margin-top:18px;padding:3px 14px;line-height:1;vertical-align:middle;border-radius:6px;background:linear-gradient(100deg,#12224d,#2f5fbf);color:#fff;text-decoration:none;}
 .back-home svg{color:#fff;}
 footer .back-home{margin-top:0;}
-.minibar{background:linear-gradient(135deg,#12224d,#2f5fbf);color:#fff;padding:10px 20px;border-radius:8px;margin-top:30px;font-weight:700;}
 .ch01{--accent:hsl(280,78%,25%);--accent2:hsl(280,58%,55%);--soft:hsl(280,28%,95%);}
+.ch02{--accent:hsl(140,78%,25%);--accent2:hsl(140,58%,55%);--soft:hsl(140,28%,95%);}
+.ch03{--accent:hsl(0,78%,25%);--accent2:hsl(0,58%,55%);--soft:hsl(0,28%,95%);}
+.tablewrap{overflow-x:auto;}
+table{border-collapse:separate;border-spacing:0;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.12);background:#fff;color:#1c2330;}
+th{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#fff;padding:9px 12px;text-align:left;}
+td{padding:9px 12px;vertical-align:top;border-top:1px solid #d9dfe8;background:#fff;color:#1c2330;}
+tr:nth-child(even) td{background:#fafbfe;}
+.callout{border-left:6px solid var(--accent);background:linear-gradient(180deg,var(--soft),#fff);color:#1c2330;padding:8px 16px;border-radius:0 8px 8px 0;margin:16px 0;}
+.callout strong{color:var(--accent);}
+h2{border-left:6px solid var(--accent);color:var(--accent);background:linear-gradient(90deg,var(--soft),#fff);padding:6px 12px;}
 a{color:#1a4fa0;background:transparent;}
 footer{padding:18px 30px 30px;background:#fff;color:#1c2330;}
 </style>
@@ -33,11 +42,54 @@ footer{padding:18px 30px 30px;background:#fff;color:#1c2330;}
 <div class="wrap">
 <a class="back-home" href="../" title="親サイトへ戻る"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M2 8 8 2l6 6M3.5 7v7h3.5v-4h2v4h3.5V7"/></svg></a>
 <p>ArtCraft は、AI 画像・動画制作のオープンソース デスクトップアプリ。このプロジェクトは ArtCraft と、同名で語られるシリーズ (Crafting Apps) を調べる。</p>
-<div class="minibar">資料</div>
-<section class="ch01">
+<section class="ch01" id="ch01">
 <h1>01_research 調査</h1>
 <ul>
 <li><a href="notes/01_research/r261025-01-ArtCraft.html">ArtCraft の調査</a></li>
+</ul>
+</section>
+
+<section class="ch02" id="ch02">
+<h1>Craft Series (調査対象)</h1>
+<div class="tablewrap"><table>
+<thead><tr><th>アプリ</th><th>代替する製品</th><th>リポジトリ</th></tr></thead>
+<tbody>
+<tr><td>PhotoCraft</td><td>Adobe Photoshop</td><td><a href="https://github.com/storytold/photocraft">storytold/photocraft</a></td></tr>
+<tr><td>VectorCraft</td><td>Adobe Illustrator</td><td><a href="https://github.com/storytold/vectorcraft">storytold/vectorcraft</a></td></tr>
+<tr><td>FilmCraft</td><td>Adobe Premiere Pro</td><td><a href="https://github.com/storytold/filmcraft">storytold/filmcraft</a></td></tr>
+<tr><td>LightCraft</td><td>Adobe Lightroom</td><td><a href="https://github.com/storytold/lightcraft">storytold/lightcraft</a></td></tr>
+<tr><td>PdfCraft</td><td>Adobe Acrobat</td><td><a href="https://github.com/storytold/pdfcraft">storytold/pdfcraft</a></td></tr>
+<tr><td>EffectCraft</td><td>Adobe After Effects</td><td><a href="https://github.com/storytold/effectcraft">storytold/effectcraft</a></td></tr>
+<tr><td>DesignCraft</td><td>Adobe InDesign</td><td><a href="https://github.com/storytold/designcraft">storytold/designcraft</a></td></tr>
+<tr><td>WordCraft</td><td>Microsoft Word</td><td><a href="https://github.com/storytold/wordcraft">storytold/wordcraft</a></td></tr>
+<tr><td>GridCraft</td><td>Microsoft Excel</td><td><a href="https://github.com/storytold/gridcraft">storytold/gridcraft</a></td></tr>
+<tr><td>DeckCraft</td><td>Microsoft PowerPoint</td><td><a href="https://github.com/storytold/deckcraft">storytold/deckcraft</a></td></tr>
+<tr><td>CADCraft</td><td>Autodesk AutoCAD</td><td><a href="https://github.com/storytold/cadcraft">storytold/cadcraft</a></td></tr>
+<tr><td>SoundCraft</td><td>Avid Pro Tools (録音・ミキシング用 DAW)</td><td><a href="https://github.com/storytold/soundcraft">storytold/soundcraft</a></td></tr>
+<tr><td>FigCraft</td><td>Figma</td><td><a href="https://github.com/storytold/figcraft">storytold/figcraft</a></td></tr>
+<tr><td>ArtCraft Launcher</td><td>代替なし (各アプリの導入と更新)</td><td><a href="https://github.com/storytold/craft-launcher">storytold/craft-launcher</a></td></tr>
+<tr><td>ArtCraft</td><td>代替なし (AI 画像・動画スタジオ)</td><td><a href="https://github.com/storytold/artcraft">storytold/artcraft</a></td></tr>
+</tbody></table></div>
+<p>出典: <a href="https://craftsuite.net/">craftsuite.net</a> ・ <a href="https://www.windowsmode.com/?p=47621">Windows Mode</a>。アプリ数は出典で 12 本 (Crafting Apps) ・ 13 本 ・ 15 本 (Launcher と ArtCraft を含む) と揃わない。FigCraft は Windows Mode の一覧に無い。</p>
+</section>
+
+<section class="ch03" id="ch03">
+<h1>今後の資料</h1>
+<ul>
+<li>ArtCraft Launcher の調査</li>
+<li>PhotoCraft の調査</li>
+<li>VectorCraft の調査</li>
+<li>FilmCraft の調査</li>
+<li>LightCraft の調査</li>
+<li>PdfCraft の調査</li>
+<li>EffectCraft の調査</li>
+<li>DesignCraft の調査</li>
+<li>WordCraft の調査</li>
+<li>GridCraft の調査</li>
+<li>DeckCraft の調査</li>
+<li>CADCraft の調査</li>
+<li>SoundCraft の調査</li>
+<li>FigCraft の調査</li>
 </ul>
 </section>
 </div>
