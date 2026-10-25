@@ -13,7 +13,7 @@ body{margin:0;background:#fff;color:#1c2330;font:15.5px/1.85 "Segoe UI","Yu Goth
 .wrap{padding:0 30px;}
 .titlebar h1{font-size:1.8em;margin:0 0 6px;color:#fff;}
 .titlebar .lead,.titlebar .date{font-size:.85em;color:#e6ecfa;}
-.back-home{display:inline-block;margin-top:18px;padding:2px 14px;border-radius:6px;background:linear-gradient(100deg,#12224d,#2f5fbf);color:#fff;text-decoration:none;}
+.back-home{display:inline-block;margin-top:18px;padding:3px 14px;line-height:1;vertical-align:middle;border-radius:6px;background:linear-gradient(100deg,#12224d,#2f5fbf);color:#fff;text-decoration:none;}
 section{background:linear-gradient(180deg,var(--soft),#fff);padding:4px 26px 26px;margin:34px 0;}
 section h1{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#fff;padding:14px 20px;margin:26px 0 20px;border-radius:8px;font-size:1.4em;box-shadow:0 2px 6px rgba(0,0,0,.18);}
 h2{border-left:6px solid var(--accent);background:linear-gradient(90deg,var(--soft),#fff);color:var(--accent);padding:6px 12px;margin:30px 0 12px;font-size:1.15em;}
@@ -26,12 +26,19 @@ tr:nth-child(even) td{background:#fafbfe;}
 .callout strong{color:var(--accent);}
 .badge{display:inline-block;padding:0 9px;border-radius:6px;color:#fff;white-space:nowrap;font-size:.85em;background:linear-gradient(100deg,#b8620a,#f0a548);}
 a{color:#1a4fa0;background:transparent;}
-.back-home{color:#fff;}
+.back-home,.back-home svg{color:#fff;}
+footer .back-home{margin-top:0;}
 code{background:#f4f6fa;border:1px solid #d9dfe8;color:#17335f;padding:0 4px;border-radius:4px;}
 footer{padding:18px 30px 30px;background:#fff;color:#1c2330;}
 .ch01{--accent:hsl(280,78%,25%);--accent2:hsl(280,58%,55%);--soft:hsl(280,28%,95%);}
-.ch02{--accent:hsl(140,78%,25%);--accent2:hsl(140,58%,55%);--soft:hsl(140,28%,95%);}
-.ch03{--accent:hsl(0,78%,25%);--accent2:hsl(0,58%,55%);--soft:hsl(0,28%,95%);}
+.ch02{--accent:hsl(210,78%,25%);--accent2:hsl(210,58%,55%);--soft:hsl(210,28%,95%);}
+.ch03{--accent:hsl(140,78%,25%);--accent2:hsl(140,58%,55%);--soft:hsl(140,28%,95%);}
+.ch04{--accent:hsl(70,78%,25%);--accent2:hsl(70,58%,55%);--soft:hsl(70,28%,95%);}
+.ch05{--accent:hsl(0,78%,25%);--accent2:hsl(0,58%,55%);--soft:hsl(0,28%,95%);}
+.toc ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:18px 0 0;counter-reset:tocnum;}
+.toc li{counter-increment:tocnum;}
+.toc ol a{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;white-space:normal;width:310px;max-width:100%;box-sizing:border-box;padding:2px 12px;border-radius:6px;font-weight:700;text-decoration:none;background:linear-gradient(100deg,var(--accent,#12224d),var(--accent2,#2f5fbf));color:#fff;}
+.toc ol a::before{content:counter(tocnum) ". ";}
 </style>
 </head>
 <body>
@@ -41,7 +48,9 @@ footer{padding:18px 30px 30px;background:#fff;color:#1c2330;}
 <div class="date">📅 作成: 2026-10-25 / 更新: 2026-10-25</div>
 </div></div>
 <div class="wrap">
-<a class="back-home" href="../../README.html" title="README へ戻る">⌂</a>
+<a class="back-home" href="../../README.html" title="README へ戻る"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M2 8 8 2l6 6M3.5 7v7h3.5v-4h2v4h3.5V7"/></svg></a>
+
+<nav class="toc"><ol><li class="ch01"><a href="#ch01">ArtCraft とは</a></li><li class="ch02"><a href="#ch02">機能とモデル</a></li><li class="ch03"><a href="#ch03">評価と注意点</a></li><li class="ch04"><a href="#ch04">同名のシリーズ (Crafting Apps)</a></li><li class="ch05"><a href="#ch05">出典</a></li></ol></nav>
 
 <section class="ch01" id="ch01">
 <h1>ArtCraft とは</h1>
@@ -84,13 +93,13 @@ footer{padding:18px 30px 30px;background:#fff;color:#1c2330;}
 <p>これらは第三者の記述で、未検証。自分の環境での実測は今後の課題。</p>
 </section>
 
-<section class="ch01" id="ch04">
+<section class="ch04" id="ch04">
 <h1>同名のシリーズ (Crafting Apps)</h1>
 <p>報道では、ArtCraft は 2 つの意味で使われる。(1) 上記の AI 画像・動画スタジオ。(2) Adobe 製品の代替を狙う無料のオープンソース アプリ群 (Crafting Apps)。後者は PhotoCraft (Photoshop 相当) ・ FilmCraft (Premiere 相当) ・ LightCraft (Lightroom 相当) などで、Rust 製、Windows ・ macOS ・ Linux 対応、オフラインでアカウント不要とされる。いずれも初期のアルファ段階。</p>
 <div class="callout"><p><strong>未解決。</strong> アプリ数は報道で 7 本と 13 本に割れている。シリーズの一覧と各アプリの状態は、次の調査で一次情報から確かめる。</p></div>
 </section>
 
-<section class="ch02" id="ch05">
+<section class="ch05" id="ch05">
 <h1>出典</h1>
 <ul>
 <li><a href="https://github.com/storytold/artcraft">GitHub - storytold/artcraft</a></li>
@@ -103,6 +112,6 @@ footer{padding:18px 30px 30px;background:#fff;color:#1c2330;}
 </ul>
 </section>
 </div>
-<footer><div class="inner"><a class="back-home" href="../../README.html" title="README へ戻る">⌂</a></div></footer>
+<footer><div class="inner"><a class="back-home" href="../../README.html" title="README へ戻る"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M2 8 8 2l6 6M3.5 7v7h3.5v-4h2v4h3.5V7"/></svg></a></div></footer>
 </body>
 </html>
